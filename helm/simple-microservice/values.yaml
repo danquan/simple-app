@@ -1,1 +1,20 @@
-replicaCount: 1
+frontend:
+  image:
+    repository: lamlaicuocdoi1105/simple-frontend
+    tag: latest
+  replicas: 1
+  service:
+    name: backend
+    type: NodePort
+    port: 80
+    nodePort: 30083
+
+backend:
+  image:
+    repository: lamlaicuocdoi1105/simple-backend
+    tag: latest
+  replicas: 1
+  service:
+    name: frontend
+    type: ClusterIP
+    port: 5000
