@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Simple Frontend</title></head>
+<body>
+<h1>Frontend</h1>
+<p id="api-response">Loading...</p>
+<script>
+  fetch('/api/hello')
+    .then(res => res.text())
+    .then(data => document.getElementById('api-response').innerText = data)
+    .catch(err => document.getElementById('api-response').innerText = "Error calling backend");
+</script>
+</body>
+</html>
