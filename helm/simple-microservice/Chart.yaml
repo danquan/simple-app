@@ -1,0 +1,5 @@
+apiVersion: v2
+name: simple-microservice
+description: A simple Helm chart for a frontend/backend app
+version: 0.1.0
+appVersion: "1.0"
